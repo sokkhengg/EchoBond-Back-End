@@ -9,10 +9,11 @@ puts "Destroying Seeds"
 
 Company.destroy_all
 Review.destroy_all
+User.destroy_all
 
 puts "Replanting Seeds"
 
-Company.create([
+Company.create!([
   { 
     name: "Meta",
     image_url: "https://1000logos.net/wp-content/uploads/2021/10/Meta-Logo.png"
@@ -54,5 +55,13 @@ Company.create([
     image_url: "https://1000logos.net/wp-content/uploads/2021/12/Glassdoor-Logo.png" 
   }
 ])
+
+User.create!(username: "joe1", password:"1", first_name: "joe", last_name: "1")
+User.create!(username: "yes2", password:"2", first_name: "yes", last_name: "2")
+User.create!(username: "okay3", password:"3", first_name: "okay", last_name: "3")
+
+# Review.create!(title: "Good", description: "Amazing office and friendly coworker", score: 4, company_id: 34, user_id: 12)
+# Review.create!(title: "Normal", description: "Everone are working hard here", score: 3, company_id: 35, user_id: 13)
+# Review.create!(title: "Fun", description: "Team knows how to work in a fun way", score: 5, company_id: 36, user_id: 14)
 
 puts "Seeds Done ✅"
