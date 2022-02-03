@@ -1,5 +1,7 @@
 class Company < ApplicationRecord
   has_many :reviews
+  has_many :users, through: :reviews
+
 
   # creates a unique slug based off of the company's name when we create a new company
   # 'facebook 1'.parameterize => "facebook-1" give a nice syntax
