@@ -2,6 +2,8 @@
 
 # yuc-company or Your Upcoming Company
 
+put a link to frondend
+
 # User Stories
 
 Ask a user I can
