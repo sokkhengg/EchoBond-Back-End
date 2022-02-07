@@ -2,7 +2,7 @@
 
 # yuc-company or Your Upcoming Company
 
-put a link to frondend
+Front-end repository, _[here](https://github.com/sokkhengg/frond-end-5)_.
 
 # User Stories
 
