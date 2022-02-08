@@ -19,6 +19,6 @@ Ask a user I can
 
 # Database relationship diagram
 
-![My Data Relationships](public/drawSQL-yuc-company-diagram.png)
+![My Data Relationships](public/networking-daigram.png)
 
 # Demo wireframe design
