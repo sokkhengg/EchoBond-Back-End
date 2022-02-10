@@ -1,21 +1,18 @@
 class CompaniesController < ApplicationController
-  # protect_from_forgery with: :null_session # invalid csrf token error
-
       def index
         companies = Company.all
-        render json: companies #CompanySerializer.new(companies, options).serialized_json
+        render json: companies 
       end
 
       def show
         company = find_company
-        render json: company.to_json(include: :reviews) #CompanySerializer.new(company, options).serialized_json
+        render json: company.to_json(include: :reviews) 
       end
 
-      # can be refactor, but puts all code in one place is easy to edit for now
       def create
         company = Company.new(company_params)
         if company.save
-          render json: company #CompanySerializer.new(company).serialized_json
+          render json: company 
         else
           render json: { error: company.errors.messages }, status: 422
         end
@@ -24,7 +21,7 @@ class CompaniesController < ApplicationController
       def update
         company = find_company
         if company.update(company_params)
-          render json: company #CompanySerializer.new(company, options).serialized_json
+          render json: company
         else
           render json: { error: company.errors.messages }, status: 422
         end
@@ -47,11 +44,6 @@ class CompaniesController < ApplicationController
       end
 
       def company_params
-        params.require(:company).permit(:name, :image_url) # a different way to write strong params
+        params.require(:company).permit(:name, :image_url)
       end
-
-      # fast_jsonapi "compound document" => including any associated review data in that payload
-      # def options
-      #   @options ||= { include: %i[reviews] }
-      # end
 end
