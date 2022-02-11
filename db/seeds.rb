@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Destroying Seeds"
 
-Company.destroy_all
-Review.destroy_all
+# Company.destroy_all
+# Review.destroy_all
 User.destroy_all
 Quiz.destroy_all
 QuizQuestion.destroy_all
@@ -16,48 +16,48 @@ AnswerAttribute.destroy_all
 
 puts "Replanting Seeds"
 
-Company.create!([
-  { 
-    name: "Meta",
-    image_url: "https://1000logos.net/wp-content/uploads/2021/10/Meta-Logo.png"
-  }, 
-  { 
-    name: "Amazon",
-    image_url: "https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png"
-  },
-  { 
-    name: "Tiktok",
-    image_url: "https://1000logos.net/wp-content/uploads/2019/06/Tiktok_Logo.png" 
-  }, 
-  { 
-    name: "Airbnb",
-    image_url: "https://1000logos.net/wp-content/uploads/2017/08/Airbnb-Logo.png" 
-  }, 
-  { 
-    name: "Bumble",
-    image_url: "https://1000logos.net/wp-content/uploads/2021/05/Bumble-logo.png" 
-  }, 
-  { 
-    name: "DoorDash",
-    image_url: "https://1000logos.net/wp-content/uploads/2021/06/DoorDash-logo.png" 
-  },
-  { 
-    name: "Ebay",
-    image_url: "https://1000logos.net/wp-content/uploads/2018/10/Ebay-Logo-1.png" 
-  },
-  { 
-    name: "Dropbox",
-    image_url: "https://1000logos.net/wp-content/uploads/2020/08/Dropbox-logo.png" 
-  },
-  { 
-    name: "GitHub",
-    image_url: "https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" 
-  },
-  { 
-    name: "Glassdoor",
-    image_url: "https://1000logos.net/wp-content/uploads/2021/12/Glassdoor-Logo.png" 
-  }
-])
+# Company.create!([
+#   { 
+#     name: "Meta",
+#     image_url: "https://1000logos.net/wp-content/uploads/2021/10/Meta-Logo.png"
+#   }, 
+#   { 
+#     name: "Amazon",
+#     image_url: "https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png"
+#   },
+#   { 
+#     name: "Tiktok",
+#     image_url: "https://1000logos.net/wp-content/uploads/2019/06/Tiktok_Logo.png" 
+#   }, 
+#   { 
+#     name: "Airbnb",
+#     image_url: "https://1000logos.net/wp-content/uploads/2017/08/Airbnb-Logo.png" 
+#   }, 
+#   { 
+#     name: "Bumble",
+#     image_url: "https://1000logos.net/wp-content/uploads/2021/05/Bumble-logo.png" 
+#   }, 
+#   { 
+#     name: "DoorDash",
+#     image_url: "https://1000logos.net/wp-content/uploads/2021/06/DoorDash-logo.png" 
+#   },
+#   { 
+#     name: "Ebay",
+#     image_url: "https://1000logos.net/wp-content/uploads/2018/10/Ebay-Logo-1.png" 
+#   },
+#   { 
+#     name: "Dropbox",
+#     image_url: "https://1000logos.net/wp-content/uploads/2020/08/Dropbox-logo.png" 
+#   },
+#   { 
+#     name: "GitHub",
+#     image_url: "https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" 
+#   },
+#   { 
+#     name: "Glassdoor",
+#     image_url: "https://1000logos.net/wp-content/uploads/2021/12/Glassdoor-Logo.png" 
+#   }
+# ])
 
 # User.create!(username: "joe1", password:"1", first_name: "joe", last_name: "1")
 # User.create!(username: "yes2", password:"2", first_name: "yes", last_name: "2")
@@ -67,8 +67,8 @@ Company.create!([
 # Review.create!(title: "Normal", description: "Everone are working hard here", score: 3, company_id: 35, user_id: 13)
 # Review.create!(title: "Fun", description: "Team knows how to work in a fun way", score: 5, company_id: 36, user_id: 14)
 
-user1 = User.create(name: "Ajoe", password_digest: "test", email: "test@test.com", user_type: "admin")
-user1 = User.create(name: "Ujoe", password_digest: "test", email: "test@test.com", user_type: "user")
+user1 = User.create(name: "Ajoe", password_digest: "joe1", email: "joe1@joe1.com", user_type: "admin")
+user1 = User.create(name: "Ujoe", password_digest: "joe2", email: "joe2@joe2.com", user_type: "user")
 # user1 = User.create(name: "Walter", password_digest: "test", email: "test@test.com", user_type: "admin")
 # user1 = User.create(name: "Karson", password_digest: "test", email: "test@test.com", user_type: "user")
 # user1 = User.create(name: "Matteo", password_digest: "test", email: "test@test.com", user_type: "admin")

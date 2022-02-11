@@ -10,23 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_09_020524) do
+ActiveRecord::Schema.define(version: 2021_10_29_211007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answer_attributes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "answer_attribute"
     t.string "quiz_answer_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "companies", force: :cascade do |t|
-    t.string "name"
-    t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", force: :cascade do |t|
@@ -38,10 +31,10 @@ ActiveRecord::Schema.define(version: 2022_02_09_020524) do
 
   create_table "quiz_answers", force: :cascade do |t|
     t.string "answer"
-    t.integer "quiz_question_id"
-    t.integer "question_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "quiz_question_id"
+    t.integer "question_id"
   end
 
   create_table "quiz_questions", force: :cascade do |t|
@@ -58,32 +51,22 @@ ActiveRecord::Schema.define(version: 2022_02_09_020524) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.integer "score"
-    t.integer "company_id"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "user_attributes", force: :cascade do |t|
-    t.integer "score"
-    t.string "attr"
     t.integer "user_id"
     t.integer "quiz_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "score"
+    t.string "attr"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
     t.string "email"
-    t.string "user_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_type"
   end
 
 end
