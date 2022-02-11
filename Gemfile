@@ -23,6 +23,8 @@ gem "puma", "~> 5.0"
 
 # Use jwt for JSON auth
 gem 'jwt', '~> 1.5', '>= 1.5.4'
+# gem "jwt", "~> 2.1"
+
 
 gem 'devise'
 gem 'devise-jwt'
@@ -58,3 +60,4 @@ group :development do
 end
 
 gem 'jsonapi-serializer'
+gem 'pry', '~> 0.13.1'
