@@ -24,11 +24,16 @@ gem "puma", "~> 5.0"
 # Use jwt for JSON auth
 gem 'jwt', '~> 1.5', '>= 1.5.4'
 
+gem 'devise'
+gem 'devise-jwt'
+
 # dotenv loads variables from a .env file into ENV when the environment is bootstrapped.
 gem "dotenv-rails", groups: [:development, :test]
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
+
+gem 'active_model_serializers'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -52,3 +57,4 @@ group :development do
   # gem "spring"
 end
 
+gem 'jsonapi-serializer'
