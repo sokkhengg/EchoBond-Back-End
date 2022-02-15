@@ -20,4 +20,3 @@ Ask a user I can
 
 ![My Data Relationships](public/networking-daigram.png)
 
-# Demo wireframe design
