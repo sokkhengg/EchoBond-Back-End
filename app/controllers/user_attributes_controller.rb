@@ -6,12 +6,6 @@ class UserAttributesController < ApplicationController
   end
 
   def unique
-      #scores = UserAttribute.group(:quiz_id)
-      #scores = UserAttribute.select(:quiz_id).distinct
-      #scores = UserAttribute.all
-      #scores = UserAttribute.all.group(:quiz_id)
-      #scores = UserAttribute.distinct(:quiz_id)
-      #scores = UserAttribute.all.select(:quiz_id).group(:quiz_id)
       scores = UserAttribute.all
       uniqueScores = {}
       scores.each do |score|

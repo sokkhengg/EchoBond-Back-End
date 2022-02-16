@@ -27,16 +27,6 @@ class CompaniesController < ApplicationController
         end
       end
 
-      # def destroy
-      #   company = find_company
-      #   if company.destroy
-      #     head :no_content
-      #     render json: { message: "Company deleted" }, status: :ok
-      #   else
-      #     render json: { errors: company.errors.messages }, status: 422
-      #   end
-      # end
-
       private
 
       def find_company
