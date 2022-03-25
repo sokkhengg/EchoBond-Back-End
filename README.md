@@ -9,7 +9,6 @@ Front-end repository, _[here](https://github.com/sokkhengg/frond-end-5)_.
 Ask a user I can
 
 * chat with other users and company.
-* taking the quiz.
 * log in and log out.
 * Only admin can access create quiz page
 * Only users can take the quiz
