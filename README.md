@@ -26,4 +26,6 @@ Ask a user I can
 * npm start
 
 ## To start the back end
+* bundle install
+* sudo service postgresql start
 * rails s
