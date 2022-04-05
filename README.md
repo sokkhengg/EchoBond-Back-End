@@ -19,3 +19,11 @@ Ask a user I can
 
 ![My Data Relationships](public/networking-daigram.png)
 
+# Installation
+
+## To start the front end
+* npm install
+* npm start
+
+## To start the back end
+* rails s
