@@ -7,7 +7,6 @@ class Quiz < ApplicationRecord
   # take each question in the quiz and return the corresponding answer
   def get_answers
       self.quiz_questions.map do |question|
-          #byebug
           question.quiz_answers
       end
   end
@@ -19,10 +18,6 @@ class Quiz < ApplicationRecord
           quiz_id: self.id,
           questions: {}
       }
-      #quiz name
-      #--question
-      ##----answer
-      ###------answer attribute
 
       self.quiz_questions.each.with_index(1) do |question, index|
           h[:questions][index] = {
